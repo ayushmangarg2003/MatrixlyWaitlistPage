@@ -284,7 +284,15 @@
             .section-1-text-bottom {
                 .input-conatiner {
                     .email-input {
-                        font-size: 12px;
+                        padding: 2px 12px;
+                        height: 35px;    
+                        & i{
+                            font-size: 1.25rem;
+                        }
+                        
+                        & input{
+                            font-size: 14px;
+                        }
                     }
                 }
             }
