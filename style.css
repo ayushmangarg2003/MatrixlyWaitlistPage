@@ -111,13 +111,15 @@
     }
 }
 
-.company-logo{
+.company-logo {
     position: absolute;
+    height: 28px;
     top: 0;
     left: 0;
-    padding:16px 10% ;
+    padding: 16px 0px 0px 10%;
+    background-color: #EaE4FF;
 
-    & img{
+    & img {
         width: 200px;
     }
 }
@@ -160,7 +162,11 @@
         }
 
         .section-1-heading {
-            background: -webkit-linear-gradient(#6E5DCD, #746BDD, #FE7BFD, #BB7DFF);
+            color: #6E5DCD;
+        }
+
+        .section-1-heading p {
+            background: -webkit-radial-gradient(#FE7BFD, #6E5DCD);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -192,11 +198,11 @@
                     border-radius: 33px;
                     gap: 12px;
 
-                    & i{
+                    & i {
                         font-size: 1.25rem;
                     }
-                    
-                    & input{
+
+                    & input {
                         font-size: 16px;
                         border: none;
                         width: 100%;
@@ -258,7 +264,32 @@
 }
 
 
-@media only screen and (max-width:512px) {
+@media only screen and (max-width:1100px) {
+    .common-heading {
+        font-size: 56px;
+        line-height: 60px;
+    }
+    .common-body{
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .company-logo{
+        padding: 16px 0 0 24px;
+    }
+
+    .section {
+        height: auto;
+        padding: 2rem 0;
+        min-height: 100vh;
+
+        .section-container {
+            width: 95%;
+        }
+    }
+}
+
+@media only screen and (max-width:840px) {
     .common-heading {
         font-size: 42px;
         line-height: 45px;
@@ -268,6 +299,7 @@
         font-size: 12px;
         margin-top: 0;
         font-weight: 600;
+        line-height: 16px;
     }
 
     .join-btn {
@@ -285,12 +317,13 @@
                 .input-conatiner {
                     .email-input {
                         padding: 2px 12px;
-                        height: 35px;    
-                        & i{
+                        height: 35px;
+
+                        & i {
                             font-size: 1.25rem;
                         }
-                        
-                        & input{
+
+                        & input {
                             font-size: 14px;
                         }
                     }
@@ -299,20 +332,17 @@
         }
     }
 
-    .company-logo{
-        padding: 16px 0px 0px 24px ;
+    .company-logo {
+        padding: 16px 13%;
         display: flex;
         align-items: center;
-    
-        & img{
+
+        & img {
             width: 150px;
         }
     }
 
     .section {
-        height: auto;
-        padding: 4rem 0;
-        min-height: 100vh;
 
         .section-container {
             width: 100%;
@@ -322,12 +352,11 @@
             gap: 2rem;
 
             .section-text {
-                width: 95%;
+                width: 75%;
             }
 
             .section-img {
-                width: 95%;
-
+                width: 75%;
             }
 
             .section-img img {
@@ -340,6 +369,30 @@
     .section-2 {
         .section-container {
             flex-direction: column-reverse;
+        }
+    }
+}
+
+@media only screen and (max-width:512px) {
+    .company-logo {
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+
+        & img {
+            width: 150px;
+        }
+    }
+
+    .section {
+        .section-container {
+            .section-text {
+                width: 95%;
+            }
+
+            .section-img {
+                width: 95%;
+            }
         }
     }
 }
