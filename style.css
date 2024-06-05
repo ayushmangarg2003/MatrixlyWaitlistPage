@@ -111,21 +111,39 @@
     }
 }
 
+.company-logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding:16px 10% ;
+
+    & img{
+        width: 200px;
+    }
+}
+
 .join-btn {
     border-radius: 33px;
     background-color: #222222;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     outline: none;
     font-weight: 500;
-    width: 25%;
+    width: 120px;
+    height: 50px;
 }
 
 .common-heading {
     font-size: 72px;
     line-height: 75px;
     font-weight: 800;
+}
+
+.common-body {
+    font-size: 24px;
+    margin-top: 12px;
+    font-weight: 600;
 }
 
 .section-1 {
@@ -136,6 +154,10 @@
         flex-direction: column;
         justify-content: space-between;
         gap: 1rem;
+
+        .section-1-body {
+            color: #233B67;
+        }
 
         .section-1-heading {
             background: -webkit-linear-gradient(#6E5DCD, #746BDD, #FE7BFD, #BB7DFF);
@@ -161,10 +183,26 @@
 
                 .email-input {
                     border: 2px solid #BB7DFF;
+                    background-color: white;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
                     padding: 12px 20px;
                     width: 65%;
                     border-radius: 33px;
-                    font-size: 16px;
+                    gap: 12px;
+
+                    & i{
+                        font-size: 1.25rem;
+                    }
+                    
+                    & input{
+                        font-size: 16px;
+                        border: none;
+                        width: 100%;
+                        outline: none;
+                        height: 100%;
+                    }
                 }
             }
 
@@ -180,12 +218,6 @@
 
         }
 
-        .section-1-body {
-            font-size: 24px;
-            margin-top: 12px;
-            font-weight: 600;
-            color: #233B67;
-        }
     }
 }
 
@@ -202,9 +234,6 @@
         }
 
         .section-2-body {
-            font-size: 24px;
-            margin-top: 12px;
-            font-weight: 600;
             color: #794544;
         }
     }
@@ -223,9 +252,6 @@
         }
 
         .section-3-body {
-            font-size: 24px;
-            margin-top: 12px;
-            font-weight: 600;
             color: #081E8B;
         }
     }
@@ -238,13 +264,47 @@
         line-height: 45px;
     }
 
-    .join-btn {
-        font-size: 14px;
+    .common-body {
+        font-size: 12px;
+        margin-top: 0;
+        font-weight: 600;
     }
 
+    .join-btn {
+        font-size: 14px;
+        height: 35px;
+    }
+
+    .section-1 {
+        .section-1-text {
+            .section-1-upperhead {
+                font-size: 12px;
+            }
+
+            .section-1-text-bottom {
+                .input-conatiner {
+                    .email-input {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .company-logo{
+        padding: 16px 0px 0px 24px ;
+        display: flex;
+        align-items: center;
+    
+        & img{
+            width: 150px;
+        }
+    }
 
     .section {
         height: auto;
+        padding: 4rem 0;
+        min-height: 100vh;
 
         .section-container {
             width: 100%;
@@ -266,6 +326,12 @@
                 width: 100%;
             }
 
+        }
+    }
+
+    .section-2 {
+        .section-container {
+            flex-direction: column-reverse;
         }
     }
 }
